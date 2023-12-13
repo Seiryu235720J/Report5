@@ -2,10 +2,27 @@ package jp.ac.uryukyu.ie.e235720;
 
 public class Report5 {
     public static void main(String[] args) {
-        // 条件1: String型変数 str を宣言し、初期値として null を代入する。
+        
+      
+       
+    
+    
+    try {
+       
         String str = null;
 
-        // 条件2: str.length() の内容を表示しようとする。
+        
+        System.out.println("NullPointerException occurred.");
+
+        
+        System.out.println("Exception message: " + new NullPointerException().getMessage());
+
+        // NullPointerExceptionが発生する行
         System.out.println(str.length());
+    } catch (NullPointerException e) {
+        // 例外処理
+        System.err.println("Caught NullPointerException: " + e.getMessage());
     }
+    
+}
 }
